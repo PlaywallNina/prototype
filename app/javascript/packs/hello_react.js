@@ -4,10 +4,11 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ThankYou from './react/components/ThankYou'
 
 class Hello extends React.Component {
   render() {
-    return <div>Hello {this.props.name}!</div>
+    return <ThankYou />
   }
 }
 
