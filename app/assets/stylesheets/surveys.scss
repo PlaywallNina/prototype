@@ -30,6 +30,14 @@ div.questions {
       color: $brand;
       text-align: center;
       width: 200px;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .button {
+          width: 75px !important;
+        }
+      }
     }
     li.images {
       display: flex;

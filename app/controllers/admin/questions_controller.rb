@@ -24,6 +24,32 @@ class Admin::QuestionsController < Admin::BaseController
     end
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    @question = Question.find(params[:id])
+
+    if @question.update_attributes(question_params)
+      (0..3).each do |n|
+        currentparams = params.dig(:question, :answers_attributes, "#{n}")
+        @question.answers[n].update_attributes(picture: currentparams[:picture], title: currentparams[:title], order: currentparams[:order])
+      end
+      redirect_to admin_questions_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @question = Question.find(params[:id])
+
+    @question.destroy
+
+    redirect_to admin_questions_path
+  end
+
   private
     def question_params
       params.require(:question).permit(:text)

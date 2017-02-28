@@ -1,5 +1,10 @@
 <ul>
-  <li class='title'><%= question.text %></li>
+  <li class='title'><%= question.text %>
+    <div>
+    <%= button_to "Edit", edit_admin_question_path(question.id), { method: :get, class:'button' } %>
+    <%= button_to "Delete", admin_question_path(question.id), { method: :delete, class:'button' } %>
+    </div>
+  </li>
     <li class='images'>
     <% question.answers.each do |answer| %>
     <div class='image'>
