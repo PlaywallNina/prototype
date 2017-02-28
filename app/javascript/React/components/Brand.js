@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import logo from '../images/The_Playwall_Logo'
 
 export class Brand extends Component {
   render() {
     return(
       <div>
         <img
-          src={'https://s3.eu-central-1.amazonaws.com/theplaywall/The_Playwall_Logo.png'},
+          src={logo}
         ></img>
       </div>
     )
