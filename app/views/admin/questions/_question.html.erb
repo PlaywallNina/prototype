@@ -1,8 +1,11 @@
 <ul>
   <li class='title'><%= question.text %></li>
-  <!-- this was old -->
- <!-- <li><%= question.answer_one %></li>
-  <li><%= question.answer_two %></li>
-  <li><%= question.answer_three %></li>
-  <li><%= question.answer_four %></li> -->
+    <li class='images'>
+    <% question.answers.each do |answer| %>
+    <div class='image'>
+      <%= image_tag answer.picture %>
+      <%= answer.title %>
+    </div>
+    <% end %>
+  </li>
 </ul>

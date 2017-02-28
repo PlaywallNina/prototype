@@ -3,29 +3,22 @@
     <%= f.label :text %>
     <%= f.text_field :text %>
   </div>
-  
-  <% for i in 1..4 %>
-    <div class='form-group'>
-      Question <%= i %>:
-    <div class='form-group'>
 
-  <% f.fields_for @question.answers[i] do |answer_f| %>
-    
+  <%= f.fields_for :answers do |ff| %>
     <div class='form-group'>
-      <%= answer_f.label :order %>
-      <%= answer_f.text_field :order %>
+      <%= ff.label :order %>
+      <%= ff.text_field :order %>
     </div>
     <div class='form-group'>
-      <%= answer_f.label :picture %>
-      <%= answer_f.text_field :picture %>
+      <%= ff.label :picture %>
+      <%= ff.text_field :picture %>
     </div>
-    <div class='form-group'>  
-      <%= answer_f.label :title %>
-      <%= answer_f.text_field :title %>
+    <div class='form-group'>
+      <%= ff.label :title %>
+      <%= ff.text_field :title %>
     </div>
   <% end %>
-  <div class='form-group'>
+    <div class='form-group'>
     <%= f.submit :save, class: 'button' %>
   </div>
-  <% end %>
 <% end %>

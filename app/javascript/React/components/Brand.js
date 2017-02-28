@@ -4,8 +4,7 @@ export class Brand extends Component {
   render() {
     return(
       <div>
-        <img
-        ></img>
+        Logo
       </div>
     )
   }
