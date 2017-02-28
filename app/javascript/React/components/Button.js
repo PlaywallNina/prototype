@@ -5,8 +5,6 @@ class Button extends PureComponent {
     const { clicked } = this.state
     let classes = 'click'
 
-    if (clicked) { classes += joined }
-
     return classes
   }
 
