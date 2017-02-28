@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import './App.sass'
 import ReactDOM from 'react-dom'
+import Modal from './components/Modal'
 
 class App extends React.Component {
   constructor(props) {
