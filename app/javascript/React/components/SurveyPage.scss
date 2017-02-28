@@ -1,0 +1,35 @@
+// Colors
+$brand         : #DC5D4A;
+$background    : #EBEBEC;
+$primary-light : #484E6D;
+$primary-dark  : #3D3047;
+
+// fonts
+$font          : 'Ubuntu', sans-serif;
+
+
+body {
+  font-family: $font;
+  font-size: 140%;
+  background: $background;
+}
+
+.swrapper {
+  background: $background;
+}
+
+.qwrapper {
+  text-align: center;
+}
+
+.awrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.but {
+  width: 100px;
+  height: 100px;
+}
