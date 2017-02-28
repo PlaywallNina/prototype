@@ -1,0 +1,25 @@
+<%= form_for ['admin', @question] do |f| %>
+  <div class='form-group'>
+    <%= f.label :text, 'Title text' %>
+    <%= f.text_field :text %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :answer_one %>
+    <%= f.text_field :answer_one %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :answer_two %>
+    <%= f.text_field :answer_two %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :answer_three %>
+    <%= f.text_field :answer_three %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :answer_four %>
+    <%= f.text_field :answer_four %>
+  </div>
+  <div class="form-group">
+    <%= f.submit :save, class: 'button' %>
+  </div>
+<% end %>
