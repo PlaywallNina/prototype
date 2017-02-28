@@ -1,4 +1,18 @@
-<%= form_for ['admin', @question, @answers] do |f| %>
+<%= form_for ['admin', @question] do |f| %>
   <%= f.label :text %>
   <%= f.text_field :text %>
+  <br />
+  <%= f.label :answer_one %>
+  <%= f.text_field :answer_one %>
+  <br />
+  <%= f.label :answer_two %>
+  <%= f.text_field :answer_two %>
+  <br />
+  <%= f.label :answer_three %>
+  <%= f.text_field :answer_three %>
+  <br />
+  <%= f.label :answer_four %>
+  <%= f.text_field :answer_four %>
+  <br />
+  <%= f.submit :save %>
 <% end %>

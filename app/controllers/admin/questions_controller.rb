@@ -1,10 +1,24 @@
 class Admin::QuestionsController < Admin::BaseController
   def index
-    @question = Question.all
+    @questions = Question.all
   end
 
   def new
     @question = Question.new
   end
 
+  def create
+    @question = Question.new(question_params)
+    if @question.save
+      redirect_to admin_questions_path
+    else
+      render :new
+    end
+  end
+
+  private
+    def question_params
+      params.require(:question).permit(:text, :answer_one, :answer_two,
+                                       :answer_three, :answer_four)
+    end
 end
