@@ -15,7 +15,7 @@ class App extends React.Component {
       <div>
         <button onClick={() => this.openModal()}>Open modal</button>
         <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          <PlayPayPage />
+          <PlayPayPage closeModal={this.closeModal.bind(this)}/>
         </Modal>
       </div>
     )
