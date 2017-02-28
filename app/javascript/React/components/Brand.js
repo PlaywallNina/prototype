@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import logo from '../images/The_Playwall_Logo.png'
 
 export class Brand extends Component {
   render() {
     return(
       <div>
-        Logo
+        <img-loader src={logo}>
+
+        </img-loader>
       </div>
     )
   }
