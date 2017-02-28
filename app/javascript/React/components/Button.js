@@ -1,55 +1,27 @@
-import React, { PureComponent, PropTypes } from 'react'
-import './Button.sass'
+import React, { PureComponent } from 'react'
 
-class LikeButton extends PureComponent {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    liked: PropTypes.bool.isRequired,
-  }
-
+class Button extends PureComponent {
   classNames() {
-    const { liked } = this.props
-    let classes = 'like'
+    const { clicked } = this.state
+    let classes = 'click'
 
-    if (liked) { classes += ' liked' }
+    if (clicked) { classes += joined }
 
     return classes
   }
 
-  toggleLike() {
-    console.log('CLICK (Button)')
-    this.props.onChange()
-  }
+  handleClick() {
+    console.log('whammy!')
 
-  likeStatus() {
-    const { liked, likes } = this.props
-    const likesOtherThanYours = (likes || 0) - 1
-
-    if (liked && likesOtherThanYours > 0) {
-      return `You and ${likesOtherThanYours} others like this`
-    }
-
-    if (liked) return 'You like this'
-
-    if (likes > 0) return `${likes} others like this`
-
-    return null
   }
 
   render() {
-    const { liked } = this.props
     return (
-      <p className={ this.classNames() }>
-        <button onClick={ this.toggleLike.bind(this) }>
-          <img className="heart" src={ liked ? HeartRed : HeartGrey } />
-          <span className="copy">
-            <img className="heart" src={ liked ? HeartRed : HeartGrey } />
-          </span>
-        </button>
-        <span className="likes">{this.likeStatus()}</span>
-      </p>
+        <div className="actions">
+          <button className="primary" onClick={this.handleClick.bind(this)}>{this.props.name}</button>
+        </div>
     )
   }
 }
 
-export default LikeButton
+export default Button
