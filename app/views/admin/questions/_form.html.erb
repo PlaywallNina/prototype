@@ -2,17 +2,20 @@
   <%= f.label :text %>
   <%= f.text_field :text %>
   <br />
-  <%= f.label :answer_one %>
-  <%= f.text_field :answer_one %>
-  <br />
-  <%= f.label :answer_two %>
-  <%= f.text_field :answer_two %>
-  <br />
-  <%= f.label :answer_three %>
-  <%= f.text_field :answer_three %>
-  <br />
-  <%= f.label :answer_four %>
-  <%= f.text_field :answer_four %>
-  <br />
+
+  <% for i in 1..4 %>
+  <p>Question <%= i %>:
+  <% f.fields_for @question.answers[i] do |answer_f| %>
+    <%= answer_f.label :order %>
+    <%= answer_f.text_field :order %>
+
+    <%= answer_f.label :picture %>
+    <%= answer_f.text_field :picture %>
+
+    <%= answer_f.label :title %>
+    <%= answer_f.text_field :title %>
+    <br />
+  <% end %>
   <%= f.submit :save %>
+<% end %>
 <% end %>
