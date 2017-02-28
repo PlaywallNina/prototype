@@ -2,7 +2,7 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's 
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+@import './variables.sass';
+
+body {
+  background-color: $background;
+  font-family: $font;
+  font-weight: 300;
+  color: $primary-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  align-self: flex-end;
+  position: relative;
+  background-color: $brand;
+  color: $primary-dark;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px $primary-light;
+  &:hover {
+    box-shadow: inset 1px 1px 4px $primary-light;
+    transform: translateY(1px);
+  }
+}
