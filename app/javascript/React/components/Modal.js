@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
-import './Modal.sass'
+import './Modal.scss'
 
 class Modal extends React.Component {
   render() {
@@ -10,11 +10,12 @@ class Modal extends React.Component {
 
     let modalStyle = {
       position: 'absolute',
+      style: 'Ubuntu',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
       zIndex: '9999',
-      background: '#fff'
+      background: '#EBEBEC'
     }
 
     let backdropStyle = {
@@ -34,12 +35,12 @@ class Modal extends React.Component {
     }
 
     return (
-      <div className={this.props.containerClassName}>
-        <div className={this.props.className} style={modalStyle}>
+      <div className={this.props.modalWrapper}>
+        <div className={this.props.modalStyle} style={modalStyle}>
           {this.props.children}
         </div>
         {!this.props.noBackdrop &&
-            <div className={this.props.backdropClassName} style={backdropStyle}
+            <div className={this.props.backdropStyle} style={backdropStyle}
                  onClick={e => this.close(e)}/>}
       </div>
     )
