@@ -4,7 +4,7 @@ import './SurveyPage.scss'
 export class SurveyPage extends Component {
   render() {
     return(
-      <div>
+      <div className="swrapper">
         <div className="qwrapper">
           <h2>The Question!</h2>
         </div>

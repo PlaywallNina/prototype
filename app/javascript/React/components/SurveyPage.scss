@@ -9,7 +9,12 @@ $font          : 'Ubuntu', sans-serif;
 
 
 body {
-  font: 100% $font;
+  font-family: $font;
+  font-size: 140%;
+  background: $background;
+}
+
+.swrapper {
   background: $background;
 }
 
