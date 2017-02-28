@@ -5,10 +5,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ThankYou from './react/components/ThankYou'
+import Brand from './react/components/Brand'
 
 class Hello extends React.Component {
   render() {
-    return <ThankYou />
+    return(
+      <div>
+        <Brand />
+        <ThankYou />
+      </div>
+    )
   }
 }
 
