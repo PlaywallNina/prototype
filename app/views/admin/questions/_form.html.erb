@@ -1,24 +1,25 @@
 <%= form_for ['admin', @question] do |f| %>
   <div class='form-group'>
-    <%= f.label :text %>
-    <%= f.text_field :text %>
+    <%= f.label :text, 'Question Text' %>
+    <%= f.text_area :text, { rows: 3, placeholder: 'This text will be displayed on the popup' } %>
   </div>
 
   <%= f.fields_for :answers do |ff| %>
-    <div class='form-group'>
-      <%= ff.label :order %>
-      <%= ff.text_field :order %>
+    <div class='form-card'>
+      <h2>Answer #<%= ff.index+1 %></h2>
+      <div class="form-group">
+        <%= ff.label :picture, 'Picture Link' %>
+        <%= ff.text_field :picture, { placeholder: 'http://link.to.image/here.jpg' }  %>
+      </div>
+      <div class="form-group">
+        <%= ff.label :title %>
+        <%= ff.text_field :title, { placeholder: 'title for this image' } %>
+      </div>
+      <%= ff.hidden_field :order, value: ff.index+1 %>
     </div>
-    <div class='form-group'>
-      <%= ff.label :picture %>
-      <%= ff.text_field :picture %>
-    </div>
-    <div class='form-group'>
-      <%= ff.label :title %>
-      <%= ff.text_field :title %>
-    </div>
+
   <% end %>
-    <div class='form-group'>
+  <div class='form-group'>
     <%= f.submit :save, class: 'button' %>
   </div>
 <% end %>
