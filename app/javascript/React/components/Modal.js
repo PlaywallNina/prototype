@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import './Modal.sass'
 
 
-class Modal extends React.Component {
+class Modal extends PureComponent {
   render() {
     if (this.props.isOpen === false)
       return null
