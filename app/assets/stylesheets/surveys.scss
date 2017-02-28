@@ -7,24 +7,44 @@
 // index
 div.questions {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 
   ul {
+    border-bottom: 1px dotted $brand;
     list-style-type: none;
     display: flex;
-    width: 200px;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+    &:last-child {
+      border-bottom: none;
+    }
     li {
-      display: block;
-      width: 100%;
-      text-align: center;
+      margin-top: -16px;
     }
     li.title {
       font-weight: 700;
       color: $brand;
-      margin-bottom: 10px;
+      text-align: center;
+      width: 200px;
+    }
+    li.images {
+      display: flex;
+      flex-wrap: wrap;
+      div.image {
+        display: inline-flex;
+        flex-direction: column;
+        margin: 10px 5px;
+        text-align: center;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 10%;
+        }
+      }
     }
   }
 }
