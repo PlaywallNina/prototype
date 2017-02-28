@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import './PlayPayPage.sass'
 
 export class PlayPayPage extends React.Component {
+
   render() {
 
     return(
@@ -14,11 +15,13 @@ export class PlayPayPage extends React.Component {
         <p>neem een abbonement om verder te lezen.</p>
         <p><button onClick={ this.props.closeModal }>Krijg onbeperkt toegang</button></p>
         <p><button onClick={ this.props.closeModal }>Ik ben al NRC abbonee</button></p>
-        <p><button onClick={ this.props.closeModal }>Play</button></p>
+        <p><button onClick={ history.push('/') }>Play</button></p>
         <p><button onClick={ this.props.closeModal }>x</button></p>
       </article>
     )
   }
 }
+
+
 
 export default PlayPayPage
