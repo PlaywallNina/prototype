@@ -7,7 +7,15 @@ const sharedConfig = require('./shared.js')
 
 module.exports = merge(sharedConfig.config, {
   devtool: 'sourcemap',
-
+  // sass-loader configs
+  module: {
+        rules: [{
+            test: /\.scss$/,
+            use: [{
+                loader: "sass-loader" // compiles Sass to CSS
+            }]
+        }]
+    },
   stats: {
     errorDetails: true
   },

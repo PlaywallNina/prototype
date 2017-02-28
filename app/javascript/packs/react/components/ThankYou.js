@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+// import './ThankYou.sass'
 
 export class ThankYou extends Component {
   render() {
