@@ -5,20 +5,19 @@ class Admin::QuestionsController < Admin::BaseController
 
   def new
     @question = Question.new
-
-    for i in 1..4
-      @question.answer order: i
+    4.times do
+      @question.answers.build
     end
   end
 
   def create
     @question = Question.new(question_params)
-    for i in 1..4
-      @question.answers[i] = Answer.new(answer_params)
-    end
-
 
     if @question.save
+      (0..3).each do |n|
+        currentparams = params.dig(:question, :answers_attributes, "#{n}")
+        @question.answers.create(picture: currentparams[:picture], title: currentparams[:title], order: currentparams[:order])
+      end
       redirect_to admin_questions_path
     else
       render :new
@@ -30,7 +29,7 @@ class Admin::QuestionsController < Admin::BaseController
       params.require(:question).permit(:text)
     end
 
-    def answer_params
-      params.require(:answer).permit(:order, :picture, :title)
+    def answer_params(n)
+      params.require(:question).permit(params.dig(:question, :answers_attributes, "#{n}"))
     end
 end
