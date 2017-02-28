@@ -53,5 +53,3 @@ class Modal extends React.Component {
     }
   }
 }
-
-ReactDOM.render(<App/>, document.getElementById('app'))
