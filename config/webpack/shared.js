@@ -21,6 +21,12 @@ config = {
   output: { filename: '[name].js', path: path.resolve('public', distDir) },
 
   module: {
+    loaders: [
+      {
+        test: /\.scss$/,
+        loader: ['style', 'css', 'sass']
+      }
+    ],
     rules: [
       { test: /\.coffee(\.erb)?$/, loader: "coffee-loader" },
       {

@@ -1,21 +1,31 @@
 <%= form_for ['admin', @question] do |f| %>
-  <%= f.label :text %>
-  <%= f.text_field :text %>
-  <br />
-
+  <div class='form-group'>
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+  </div>
+  
   <% for i in 1..4 %>
-  <p>Question <%= i %>:
+    <div class='form-group'>
+      Question <%= i %>:
+    <div class='form-group'>
+
   <% f.fields_for @question.answers[i] do |answer_f| %>
-    <%= answer_f.label :order %>
-    <%= answer_f.text_field :order %>
-
-    <%= answer_f.label :picture %>
-    <%= answer_f.text_field :picture %>
-
-    <%= answer_f.label :title %>
-    <%= answer_f.text_field :title %>
-    <br />
+    
+    <div class='form-group'>
+      <%= answer_f.label :order %>
+      <%= answer_f.text_field :order %>
+    </div>
+    <div class='form-group'>
+      <%= answer_f.label :picture %>
+      <%= answer_f.text_field :picture %>
+    </div>
+    <div class='form-group'>  
+      <%= answer_f.label :title %>
+      <%= answer_f.text_field :title %>
+    </div>
   <% end %>
-  <%= f.submit :save %>
-<% end %>
+  <div class='form-group'>
+    <%= f.submit :save, class: 'button' %>
+  </div>
+  <% end %>
 <% end %>

@@ -1,2 +1,7 @@
 <h1>All Questions</h1>
-<%= render @questions %>
+<div class="question_actions">
+  <%= button_to "Add new", new_admin_question_path, { method: :get, class: 'button' } %>
+</div>
+<div class="questions">
+  <%= render @questions %>
+</div>
