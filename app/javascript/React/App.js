@@ -3,6 +3,7 @@ import './App.sass'
 import ReactDOM from 'react-dom'
 import Modal from './components/Modal'
 import Brand from './components/Brand'
+import SurveyPage from './components/SurveyPage'
 
 class App extends React.Component {
   constructor(props) {
@@ -15,8 +16,7 @@ class App extends React.Component {
       <div>
         <button onClick={() => this.openModal()}>Open modal</button>
         <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          <Brand />
-          <h1>Modal title</h1>
+          <SurveyPage />
           <p>hello</p>
           <p><button onClick={() => this.closeModal()}>Close</button></p>
         </Modal>

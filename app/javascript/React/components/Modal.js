@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import './Modal.sass'
 
+
 class Modal extends React.Component {
   render() {
     if (this.props.isOpen === false)
