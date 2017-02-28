@@ -17,7 +17,6 @@ class App extends React.Component {
         <button onClick={() => this.openModal()}>Open modal</button>
         <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
           <SurveyPage />
-          <p>hello</p>
           <p><button onClick={() => this.closeModal()}>Close</button></p>
         </Modal>
       </div>
