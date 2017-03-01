@@ -7,7 +7,6 @@ import {
 export default(state = [], { type, payload }) => {
   switch(type) {
     case GET_QUESTIONS_RECEIVED:
-      console.log(payload)
       return [].concat(payload)
 
     default:
