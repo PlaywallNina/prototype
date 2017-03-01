@@ -16,9 +16,16 @@ body {
 }
 
 
+.swrapper {
+  margin: 10%;
+}
 
 .qwrapper {
+  margin-top: 10%;
+  margin-bottom: 10%;
   text-align: center;
+  width: 600px;
+  height: 60px;
 }
 
 .awrapper {
@@ -35,7 +42,7 @@ body {
   background: $brand;
   margin: 2%;
   width: 45%;
-  height: 150px;
+  height: 125px;
   text-align: center;
 }
 

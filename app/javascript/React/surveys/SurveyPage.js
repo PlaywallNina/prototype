@@ -39,7 +39,7 @@ export class SurveyPage extends PureComponent {
           <div className="but"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[0].id)}
             >
-            Answer 1
+            <img src={'.../assets/images/' + this.props.currentQuestion.answers[0].picture }></img>
           </div>
           <div className="but"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[1].id)}
