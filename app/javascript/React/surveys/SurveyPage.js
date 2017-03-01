@@ -2,35 +2,61 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import Brand from '../components/Brand'
 import setCurrentQuestion from '../actions/questions/set-current-question'
+import sendAnswer from '../actions/questions/send-answer'
 import './SurveyPage.scss'
 
 export class SurveyPage extends PureComponent {
 
-  componentDidMount(){
-   const { setCurrentQuestion, questionIndex, questions } = this.props
-    setCurrentQuestion(questionIndex, questions)
+  handleClick(e) {
+    this.props.sendAnswer(e)
   }
-  render() {
-    return(
 
+  componentDidMount(){
+      const { questionIndex, questions } = this.props
+      this.props.setCurrentQuestion(questionIndex, questions)
+  }
+
+  render() {
+    if (!this.props.hasQuestion) return null
+
+    return(
       <div className="swrapper">
         <Brand />
         <div className="qwrapper">
           <h2>The Question!</h2>
         </div>
         <div className="awrapper">
-          <div className="but" id="a1">Answer 1</div>
-          <div className="but" id="a2">Answer 2</div>
-          <div className="but" id="a3">Answer 3</div>
-          <div className="but" id="a4">Answer 4</div>
+          <div className="but"
+            onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[0].id)}
+            >
+            Answer 1
+          </div>
+          <div className="but"
+            onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[1].id)}
+            >
+            Answer 2
+          </div>
+          <div className="but"
+            onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[2].id)}
+            >
+            Answer 3
+          </div>
+          <div className="but"
+            onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[3].id)}
+            >
+            Answer 4
+          </div>
         </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({questionIndex, questions}) => ({
-  questionIndex, questions
+const mapStateToProps = ({questionIndex, questions, currentQuestion}) => ({
+  questionIndex,
+  questions,
+  currentQuestion,
+  hasQuestion: !!currentQuestion
 })
 
-export default connect(mapStateToProps, {setCurrentQuestion}) (SurveyPage)
+export default connect(mapStateToProps, {setCurrentQuestion, sendAnswer })(SurveyPage)

@@ -7,6 +7,7 @@ class App extends PureComponent {
   componentDidMount() {
     if (this.props.fetchedQuestions === false) {
       this.props.getQuestions()
+
     }
   }
 
