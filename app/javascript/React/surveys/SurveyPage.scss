@@ -3,6 +3,7 @@ $brand         : #DC5D4A;
 $background    : #EBEBEC;
 $primary-light : #484E6D;
 $primary-dark  : #3D3047;
+$brandh        : #dc8c4a;
 
 // fonts
 $font          : 'Ubuntu', sans-serif;
@@ -31,7 +32,13 @@ body {
 }
 
 .but {
-  margin: 5px;
+  background: $brand;
+  margin: 2%;
   width: 45%;
   height: 150px;
+  text-align: center;
+}
+
+.but:hover {
+  background: $brandh;
 }
