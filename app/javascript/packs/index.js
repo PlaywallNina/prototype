@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import store, { history } from '../React/store'
 import { Router, Route, IndexRoute } from 'react-router'
+import {browserHistory} from 'react-router';
 
 import App from '../React/App'
 import PlayPayPage from '../React/surveys/PlayPayPage'
