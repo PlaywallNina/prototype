@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", e => {
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={PlayPayPage} />
-          <Route path="/questions" component={SurveyPage} />
+          <Route path="/survey" component={SurveyPage} />
           <Route path="/thankyou" component={ThankYouPage} />
         </Route>
       </Router>

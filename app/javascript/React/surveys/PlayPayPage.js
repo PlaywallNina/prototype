@@ -12,7 +12,7 @@ export class PlayPayPage extends React.Component {
 
   playClick(e) {
     e.preventDefault();
-    browserHistory.push('questions');
+    browserHistory.push('survey');
 
     console.log("click button");
   }
