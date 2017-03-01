@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import logo from '../images/The_Playwall_Logo.png'
+
+
 
 export class Brand extends Component {
   render() {
     return(
       <div>
-        <img-loader src={logo}>
-
-        </img-loader>
+        <img  src={'http://www.underconsideration.com/brandnew/archives/google_2015_logo_detail.png'} />
       </div>
     )
   }
