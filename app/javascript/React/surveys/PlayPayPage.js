@@ -28,19 +28,24 @@ export class PlayPayPage extends React.Component {
 
     return(
 
-
-      <article className="playpay">
-        <div className="info-exit">
-          <p><button className="info" onClick={ this.props.closeModal }>i</button></p>
-          <p><button className="exit" onClick={ this.props.closeModal }>x</button></p>
-        </div>
-          <h1>De limiet van 5 gratis</h1>
-          <h1>artikelen is</h1>
-          <h1>bereikt.</h1>
-          <p>Dit artikel kost € 0,75. Betaal via iDeal  </p>
-          <p>of krijg het artikel gratis via The Playwall  </p>
-          <p><button className="pay" onClick={ this.payClick.bind(this) }>Betaal met iDeal</button></p>
-          <p><button className="play" onClick={this.playClick.bind(this) }>Play to pay</button></p>
+        <article className="playpaymodal">
+          <div className="info-exit">
+            <p><button className="info" onClick={ this.props.closeModal }>i</button></p>
+            <p><button className="exit" onClick={ this.props.closeModal }>x</button></p>
+          </div>
+          <div className="headline">
+            <h1>De limiet van 5 gratis</h1>
+            <h1>artikelen is</h1>
+            <h1>bereikt.</h1>
+          </div>
+          <div className="summary">
+            <p>Dit artikel kost € 0,75. Betaal via iDeal  </p>
+            <p>of krijg het artikel gratis via The Playwall  </p>
+          </div>
+          <div className="pay-play">
+            <p><button className="pay" onClick={ this.payClick.bind(this) }>Betaal met iDeal</button></p>
+            <p><button className="play" onClick={this.playClick.bind(this) }>Play to pay</button></p>
+          </div>
         </article>
 
     )
