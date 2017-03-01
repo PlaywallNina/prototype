@@ -1,5 +1,5 @@
 import './App.sass'
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import getQuestions from './actions/questions/fetch'
 
