@@ -10,9 +10,6 @@ export default(state = [], { type, payload }) => {
     case GET_QUESTIONS_RECEIVED:
       return [].concat(payload)
 
-    case POST_ANSWER_SUCCESS:
-      return state
-
     default:
       return state
   }
