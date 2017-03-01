@@ -1,4 +1,5 @@
 <div class="answers">
+  <h1><%= @question.text %></h1>
   <% @answers.each_with_index do |answer, i| %>
     <ul>
       <li class='title'><%= answer.title %></li>
@@ -14,4 +15,5 @@
       </li>
     </ul>
   <% end %>
+  <%= link_to "See all questions", admin_questions_path %>
 </div>
