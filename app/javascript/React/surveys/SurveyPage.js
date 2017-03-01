@@ -33,7 +33,7 @@ export class SurveyPage extends PureComponent {
       <div className="swrapper">
         <Brand />
         <div className="qwrapper">
-          <h2>The Question!</h2>
+          <h2>{this.props.currentQuestion.text}</h2>
         </div>
         <div className="awrapper">
           <div className="but"
