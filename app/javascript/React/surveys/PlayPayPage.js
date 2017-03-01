@@ -35,13 +35,11 @@ export class PlayPayPage extends React.Component {
           </div>
           <div className="head-sum-play">
               <div className="headline">
-                <h1>De limiet van 5 gratis</h1>
-                <h1>artikelen is</h1>
-                <h1>bereikt.</h1>
+                <h1>De limiet van 5 gratis artikelen per maand is bereikt.</h1>
               </div>
               <div className="summary">
-                <p>Dit artikel kost € 0,75. Betaal via iDeal  </p>
-                <p>of krijg het artikel gratis via The Playwall  </p>
+                <p>Dit artikel kost € 0,75. Betaal via iDeal
+                of krijg het artikel gratis via The Playwall</p>
               </div>
               <div className="pay-play">
                 <p><button className="pay" onClick={ this.payClick.bind(this) }>Betaal met iDeal</button></p>
