@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom'
 import Modal from './components/Modal'
 
 import PlayPayPage from './surveys/PlayPayPage'
+import SurveyPage from './surveys/SurveyPage'
+import Brand from './components/Brand'
 
-class App extends React.Component {
+class App extends PureComponent {
   constructor(props) {
     super(props)
     this.state = { isModalOpen: false }
@@ -14,10 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.openModal()}>Open modal</button>
-        <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-           { this.props.children }
-        </Modal>
+        <SurveyPage />
       </div>
     )
   }

@@ -7,7 +7,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 import Modal from '../React/components/Modal'
 import App from '../React/App'
 import PlayPayPage from '../React/surveys/PlayPayPage'
-import SurveyPage from '../React/components/SurveyPage'
+import SurveyPage from '../React/surveys/SurveyPage'
 
 document.addEventListener("DOMContentLoaded", e => {
   ReactDOM.render(

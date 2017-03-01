@@ -14,22 +14,22 @@ body {
   background: $background;
 }
 
-.swrapper {
-  background: $background;
-}
+
 
 .qwrapper {
   text-align: center;
 }
 
 .awrapper {
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-flow: row;
   flex-wrap: wrap;
 }
 
 .but {
   width: 100px;
   height: 100px;
+  flex: 2;
 }

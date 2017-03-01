@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react'
-import Brand from './Brand'
+import Brand from '../components/Brand'
 import './SurveyPage.scss'
 
 export class SurveyPage extends PureComponent {
   render() {
     return(
+
       <div className="swrapper">
         <Brand />
         <div className="qwrapper">
@@ -16,7 +17,6 @@ export class SurveyPage extends PureComponent {
           <button className="but" id="a3">Answer 3</button>
           <button className="but" id="a4">Answer 4</button>
         </div>
-
       </div>
     )
   }
