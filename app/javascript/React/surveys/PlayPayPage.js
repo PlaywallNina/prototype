@@ -3,22 +3,41 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 import { history } from '../store'
+import {browserHistory} from 'react-router';
 
 export class PlayPayPage extends React.Component {
+
+
+  playClick(e) {
+    e.preventDefault();
+    browserHistory.push('questions');
+
+    console.log("click button");
+  }
+
+  payClick(e) {
+    e.preventDefault();
+    browserHistory.push('questions');
+
+    console.log("click button");
+  }
 
   render() {
 
     return(
-      <article className="playpay">
-        <h1>De limiet van 5 gratis</h1>
-        <h1>artikelen is</h1>
-        <h1>bereikt.</h1>
-        <p>neem een abbonement om verder te lezen.</p>
-        <p><button onClick={ this.props.closeModal }>Krijg onbeperkt toegang</button></p>
-        <p><button onClick={ this.props.closeModal }>Ik ben al NRC abbonee</button></p>
-        // <p><button onClick={ history.push('/') }>Play</button></p>
-        <p><button onClick={ this.props.closeModal }>x</button></p>
-      </article>
+
+        <article className="playpay">
+          <h1>De limiet van 5 gratis</h1>
+          <h1>artikelen is</h1>
+          <h1>bereikt.</h1>
+          <p>Dit artikel kost € 0,75. Betaal via iDeal  </p>
+          <p>of krijg het artikel gratis via The Playwall  </p>
+          <p><button onClick={ this.props.closeModal }>i</button></p>
+          <p><button onClick={this.payClick.bind(this)}>Betaal met iDeal</button></p>
+          <p><button onClick={this.playClick.bind(this)}>Play to pay</button></p>
+          <p><button onClick={ this.props.closeModal }>x</button></p>
+        </article>
+
     )
   }
 }

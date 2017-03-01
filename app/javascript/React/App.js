@@ -1,35 +1,20 @@
-import React, { PureComponent } from 'react'
 import './App.sass'
-import ReactDOM from 'react-dom'
-import Modal from './components/Modal'
-
-import PlayPayPage from './surveys/PlayPayPage'
+import React from 'react'
+import { connect } from 'react-redux'
+import getQuestions from './actions/questions/fetch'
 
 class App extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = { isModalOpen: false }
+  componentDidMount() {
+    this.props.getQuestions()
   }
 
   render() {
     return (
-      <div>
-        <PlayPayPage />
+      <div className='content'>
+        { this.props.children }
       </div>
     )
   }
-
-  openModal() {
-    this.setState({ isModalOpen: true })
-  }
-
-  closeModal() {
-    this.setState({ isModalOpen: false })
-  }
-
 }
 
-export default App
-
-
-  //  <PlayPayPage closeModal={this.closeModal.bind(this)}/>
+export default connect(null, { getQuestions })(App)
