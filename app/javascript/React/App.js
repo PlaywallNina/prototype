@@ -1,9 +1,9 @@
 import './App.sass'
-import React from 'react'
-import getQuestions from './actions/questions/fetch'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import getQuestions from './actions/questions/fetch'
 
-class App extends React.Component {
+class App extends PureComponent {
   componentDidMount() {
     this.props.getQuestions()
   }
@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='content'>
-          { this.props.children }
+        { this.props.children }
       </div>
     )
   }

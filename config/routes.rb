@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   resources :questions
+  resources :given_answers
 end

@@ -7,7 +7,7 @@ import {browserHistory} from 'react-router';
 
 import App from '../React/App'
 import PlayPayPage from '../React/surveys/PlayPayPage'
-import SurveyPage from '../React/components/SurveyPage'
+import SurveyPage from '../React/surveys/SurveyPage'
 import ThankYouPage from '../React/components/ThankYou'
 
 document.addEventListener("DOMContentLoaded", e => {

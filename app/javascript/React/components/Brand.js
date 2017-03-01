@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react'
+import './Brand.scss'
 
 
 
 export class Brand extends PureComponent {
   render() {
     return(
-      <div>
-        <img  src={'http://www.underconsideration.com/brandnew/archives/google_2015_logo_detail.png'} />
+      <div className="imgwrapper">
+        <div id="brandimg"></div>
       </div>
     )
   }
