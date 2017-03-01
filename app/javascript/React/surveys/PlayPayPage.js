@@ -12,16 +12,14 @@ export class PlayPayPage extends React.Component {
 
   playClick(e) {
     e.preventDefault();
-    //naar questions
-    browserHistory.push('thankyou');
+    browserHistory.push('questions');
 
     console.log("click button");
   }
 
   payClick(e) {
     e.preventDefault();
-    //naar questions
-    browserHistory.push('thankyou');
+    browserHistory.push('questions');
 
     console.log("click button");
   }
