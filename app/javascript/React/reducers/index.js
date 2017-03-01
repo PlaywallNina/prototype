@@ -1,5 +1,5 @@
-import modalOpen from './modal-open'
+import questions from './questions'
 
 module.exports = {
-  modalOpen
+  questions,
 }

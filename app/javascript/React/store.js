@@ -2,8 +2,9 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import { browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux'
-
 import * as reducers from './reducers'
+
+import questionService from './middleware/api.js'
 
 const baseHistory = browserHistory
 const routingMiddleware = routerMiddleware(baseHistory)
@@ -16,6 +17,7 @@ const devTools = window.devToolsExtension ? window.devToolsExtension() : (f) => 
 const enhancer = compose(
   applyMiddleware(routingMiddleware),
   applyMiddleware(ReduxThunk),
+  applyMiddleware(questionService),
   devTools
 )
 
