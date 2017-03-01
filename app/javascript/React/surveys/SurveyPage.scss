@@ -26,10 +26,12 @@ body {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  max-width: 100;
+  flex: 1;
 }
 
 .but {
-  width: 100px;
-  height: 100px;
-  flex: 2;
+  margin: 5px;
+  width: 45%;
+  height: 150px;
 }
