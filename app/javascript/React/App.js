@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom'
 import Modal from './components/Modal'
 
 import PlayPayPage from './surveys/PlayPayPage'
-import SurveyPage from './surveys/SurveyPage'
-import Brand from './components/Brand'
 
 class App extends PureComponent {
   constructor(props) {
@@ -16,7 +14,7 @@ class App extends PureComponent {
   render() {
     return (
       <div>
-        <SurveyPage />
+        <PlayPayPage />
       </div>
     )
   }
