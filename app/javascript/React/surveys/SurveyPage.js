@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import {browserHistory} from 'react-router';
 import Brand from '../components/Brand'
 import setCurrentQuestion from '../actions/questions/set-current-question'
 import sendAnswer from '../actions/questions/send-answer'
@@ -11,6 +12,15 @@ export class SurveyPage extends PureComponent {
     this.props.sendAnswer(e)
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.questionIndex !== this.props.questionIndex) {
+      if (nextProps.questionIndex == 5) {
+        browserHistory.push('/thankyou')
+      }
+      const { questionIndex, questions } = nextProps
+      this.props.setCurrentQuestion(questionIndex, questions)
+    }
+  }
   componentDidMount(){
       const { questionIndex, questions } = this.props
       this.props.setCurrentQuestion(questionIndex, questions)
