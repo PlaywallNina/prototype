@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import Brand from './Brand'
 import './SurveyPage.scss'
 
-export class SurveyPage extends Component {
+export class SurveyPage extends PureComponent {
   render() {
     return(
       <div className="swrapper">
+        <Brand />
         <div className="qwrapper">
           <h2>The Question!</h2>
         </div>

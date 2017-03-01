@@ -3,7 +3,6 @@ import './App.sass'
 import ReactDOM from 'react-dom'
 import Modal from './components/Modal'
 
-import Brand from './components/Brand'
 import PlayPayPage from './surveys/PlayPayPage'
 
 class App extends React.Component {

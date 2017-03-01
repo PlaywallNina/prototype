@@ -1,14 +1,18 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import Brand from './Brand'
 import './ThankYou.scss'
 
-export class ThankYou extends Component {
+export class ThankYou extends PureComponent {
   render() {
     return(
       <div>
-        <h1>Thanks!</h1>
+        <Brand />
+        <div>
+          <h1>Thanks!</h1>
 
-        <p>This time you got the article for free.</p>
-        <p>Enjoy!</p>
+          <p>This time you got the article for free.</p>
+          <p>Enjoy!</p>
+        </div>
       </div>
     )
   }
