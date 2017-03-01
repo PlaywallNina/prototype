@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import './PlayPayPage.sass'
+
 import { history } from '../store'
 import {browserHistory} from 'react-router';
 

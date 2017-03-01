@@ -3,6 +3,7 @@ $brand         : #DC5D4A;
 $background    : #EBEBEC;
 $primary-light : #484E6D;
 $primary-dark  : #3D3047;
+$brandh        : #dc8c4a;
 
 // fonts
 $font          : 'Ubuntu', sans-serif;
@@ -14,22 +15,30 @@ body {
   background: $background;
 }
 
-.swrapper {
-  background: $background;
-}
+
 
 .qwrapper {
   text-align: center;
 }
 
 .awrapper {
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-flow: row;
   flex-wrap: wrap;
+  max-width: 100;
+  flex: 1;
 }
 
 .but {
-  width: 100px;
-  height: 100px;
+  background: $brand;
+  margin: 2%;
+  width: 45%;
+  height: 150px;
+  text-align: center;
+}
+
+.but:hover {
+  background: $brandh;
 }
