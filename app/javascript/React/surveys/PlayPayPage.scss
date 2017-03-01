@@ -1,0 +1,49 @@
+// Colors
+$brand         : #DC5D4A;
+$background    : #EBEBEC;
+$primary-light : #484E6D;
+$primary-dark  : #3D3047;
+$pay           : #40C6DB;
+
+// fonts
+$font          : 'Ubuntu', sans-serif;
+
+.info-exit {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.playpay {
+  font-family: $font;
+  font-size: 140%;
+  background: $background;
+}
+
+.play {
+  font-family: $font;
+  font-size: 140%;
+  background: $brand;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  padding: 5px;
+}
+
+.pay {
+  font-family: $font;
+  font-size: 140%;
+  background: $pay;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  padding: 5px;
+}
+
+.exit {
+  font-family: $font;
+  font-size: 100%;
+
+}
+
+.info {
+  font-family: $font;
+  font-size: 100%;
+
+}
