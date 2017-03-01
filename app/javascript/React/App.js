@@ -3,7 +3,6 @@ import './App.sass'
 import ReactDOM from 'react-dom'
 import Modal from './components/Modal'
 
-import Brand from './components/Brand'
 import PlayPayPage from './surveys/PlayPayPage'
 
 class App extends React.Component {
@@ -15,7 +14,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Brand />
         <button onClick={() => this.openModal()}>Open modal</button>
         <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
           <p><button onClick={() => this.closeModal()}>Close</button></p>
