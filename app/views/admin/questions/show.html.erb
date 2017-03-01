@@ -4,7 +4,7 @@
     <ul>
       <li class='title'><%= answer.title %></li>
         <% if @amount != 0 %>
-          <li>Picked <%= answer.given_answers.count %> times | <%= (answer.given_answers.count / @amount) * 100 %>%</li>
+          <li>Picked <%= answer.given_answers.count %> times | <%= ((answer.given_answers.count.to_f / @amount) * 100).round %>%</li>
         <% else %>
           <li>Picked <%= answer.given_answers.count %> times | 0%</li>
         <% end %>
