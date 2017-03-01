@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import './PlayPayPage.sass'
+import { history } from '../store'
 
 export class PlayPayPage extends React.Component {
 
@@ -15,7 +16,7 @@ export class PlayPayPage extends React.Component {
         <p>neem een abbonement om verder te lezen.</p>
         <p><button onClick={ this.props.closeModal }>Krijg onbeperkt toegang</button></p>
         <p><button onClick={ this.props.closeModal }>Ik ben al NRC abbonee</button></p>
-        <p><button onClick={ history.push('/') }>Play</button></p>
+        // <p><button onClick={ history.push('/') }>Play</button></p>
         <p><button onClick={ this.props.closeModal }>x</button></p>
       </article>
     )

@@ -17,7 +17,7 @@ class App extends React.Component {
       <div>
         <button onClick={() => this.openModal()}>Open modal</button>
         <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          { this.props.children } 
+           { this.props.children }
         </Modal>
       </div>
     )
@@ -34,3 +34,6 @@ class App extends React.Component {
 }
 
 export default App
+
+
+  //  <PlayPayPage closeModal={this.closeModal.bind(this)}/>
