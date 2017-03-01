@@ -1,4 +1,8 @@
-class AnswersController < Admin::BaseController
+class Admin::AnswersController < Admin::BaseController
+  def show
+    @answer = Answer.find(params[:id])
+  end
+
   def new
     @answer = Answer.new
   end

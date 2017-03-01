@@ -1,0 +1,17 @@
+<div class="answers">
+  <% @answers.each_with_index do |answer, i| %>
+    <ul>
+      <li class='title'><%= answer.title %></li>
+        <% if @amount != 0 %>
+          <li>Picked <%= answer.given_answers.count %> times | <%= (answer.given_answers.count / @amount) * 100 %>%</li>
+        <% else %>
+          <li>Picked <%= answer.given_answers.count %> times | 0%</li>
+        <% end %>
+        <li class='images'>
+        <div class='image'>
+          <%= image_tag answer.picture %>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+</div>

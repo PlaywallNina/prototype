@@ -3,6 +3,18 @@ class Admin::QuestionsController < Admin::BaseController
     @questions = Question.all.order(created_at: :desc)
   end
 
+  def show
+    @question = Question.find(params[:id])
+    @answers = @question.answers
+    @givenanswers = Array.new
+    @amount = 0
+    @answers.each do |answ|
+      if GivenAnswer.where(answer_id: answ.id) != []
+        @amount += (GivenAnswer.where(answer_id: answ.id)).count
+      end
+    end
+  end
+
   def new
     @question = Question.new
     4.times do

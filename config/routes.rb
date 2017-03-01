@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'questions#index' # temporary root
       resources :questions do
-        resources :answers
+        resources :answers do
+          resources :given_answers
+        end
     end
   end
 
