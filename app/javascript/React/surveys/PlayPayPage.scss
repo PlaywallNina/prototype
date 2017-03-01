@@ -11,13 +11,30 @@ $font          : 'Ubuntu', sans-serif;
 .info-exit {
   display: flex;
   justify-content: space-between;
+
+}
+
+.pay-play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 40px 10px 40px;
+  border-radius: 4px;
 }
 
 
-.playpay {
+.playpaymodal {
   font-family: $font;
   font-size: 140%;
-  background: $background;
+  background: white;
+  padding: 20px;
+
+}
+
+
+.head-sum-play {
+  padding: 70px 10px 20px 10px;
+
 }
 
 .play {
@@ -25,7 +42,10 @@ $font          : 'Ubuntu', sans-serif;
   font-size: 140%;
   background: $brand;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  padding: 5px;
+  padding: 10px 40px;
+  color: white;
+  width: 400px;
+  border-radius: 6px;
 }
 
 .pay {
@@ -33,17 +53,59 @@ $font          : 'Ubuntu', sans-serif;
   font-size: 140%;
   background: $pay;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  padding: 5px;
+  padding: 10px 40px;
+  color: white;
+  width: 400px;
+  border-radius: 6px;
 }
 
 .exit {
   font-family: $font;
+  width: 40px;
+  height: 40px;
   font-size: 100%;
-
+  border-radius: 50%;
+  color: black;
+  border-style: solid;
+  background-color: white;
+  padding: 4px;
+  position: relative;
+  right: 5px;
+  top: -10px;
 }
 
 .info {
   font-family: $font;
+  width: 40px;
+  height: 40px;
   font-size: 100%;
+  border-radius: 50%;
+  font-family: cursive;
+  background-color: #EBEBEC;
+  color: white;
+  position: relative;
+  left: 5px;
+  top: -10px;
+  font-weight: bold;
+}
 
+.summary {
+  font-family: $font;
+  font-size: 100%;
+  text-align: center;
+}
+
+.headline {
+  font-family: $font;
+  font-size: 100%;
+  text-align: center;
+
+}
+
+p {
+  margin: 0.5em;
+}
+
+h1 {
+  margin: 0.5em;
 }

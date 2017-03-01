@@ -4,15 +4,19 @@ import './ThankYou.scss'
 
 export class ThankYou extends PureComponent {
   render() {
+    window.setTimeout(function(){
+
+         window.location.href = "https://www.google.com";
+
+     }, 3000);
+
     return(
-      <div>
+      <div id="thankyoucontainer">
         <Brand />
-        <div>
           <h1>Thanks!</h1>
 
-          <p>This time you got the article for free.</p>
+          <p>Je hebt nu toegang tot je gratis artikel.</p>
           <p>Enjoy!</p>
-        </div>
       </div>
     )
   }
