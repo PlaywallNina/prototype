@@ -1,8 +1,15 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import Brand from '../components/Brand'
+import setCurrentQuestion from '../actions/questions/set-current-question'
 import './SurveyPage.scss'
 
 export class SurveyPage extends PureComponent {
+
+  componentDidMount(){
+   const { setCurrentQuestion, questionIndex, questions } = this.props
+    setCurrentQuestion(questionIndex, questions)
+  }
   render() {
     return(
 
@@ -22,4 +29,8 @@ export class SurveyPage extends PureComponent {
   }
 }
 
-export default SurveyPage
+const mapStateToProps = ({questionIndex, questions}) => ({
+  questionIndex, questions
+})
+
+export default connect(mapStateToProps, {setCurrentQuestion}) (SurveyPage)

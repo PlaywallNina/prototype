@@ -5,7 +5,9 @@ import getQuestions from './actions/questions/fetch'
 
 class App extends PureComponent {
   componentDidMount() {
-    this.props.getQuestions()
+    if (this.props.fetchedQuestions === false) {
+      this.props.getQuestions()
+    }
   }
 
   render() {
@@ -17,4 +19,6 @@ class App extends PureComponent {
   }
 }
 
-export default connect(null, { getQuestions })(App)
+const mapStateToProps =({fetchedQuestions}) => ({fetchedQuestions})
+
+export default connect(mapStateToProps, { getQuestions })(App)
