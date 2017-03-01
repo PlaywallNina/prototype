@@ -1,13 +1,13 @@
 import {
   GET_QUESTIONS,
   GET_QUESTIONS_ERROR,
-  GET_QUESTIONS_RECEIVED
+  GET_QUESTIONS_RECEIVED,
+  POST_ANSWER_SUCCESS
 } from '../middleware/api'
 
 export default(state = [], { type, payload }) => {
   switch(type) {
     case GET_QUESTIONS_RECEIVED:
-      console.log(payload)
       return [].concat(payload)
 
     default:

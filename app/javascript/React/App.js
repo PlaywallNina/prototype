@@ -1,7 +1,7 @@
 import './App.sass'
 import React from 'react'
-import getQuestions from './actions/questions/fetch'
 import { connect } from 'react-redux'
+import getQuestions from './actions/questions/fetch'
 
 class App extends React.Component {
   componentDidMount() {
