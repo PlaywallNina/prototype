@@ -1,6 +1,5 @@
-
-import surveys from './surveys'
+import modalOpen from './modal-open'
 
 module.exports = {
-  surveys
+  modalOpen
 }
