@@ -1,0 +1,7 @@
+curl \
+-i \
+-H "Accept: application/json" \
+-H "Content-type: application/json" \
+-X POST \
+-d '{"given_answer":{"session_id":"testtest","answer_id":27}}' \
+http://localhost:5000/given_answers
