@@ -21,6 +21,11 @@ img {
   object-fit: contain;
 }
 
+footer {
+  margin-top: 5%;
+  text-align: center;
+}
+
 .qwrapper {
   text-align: center;
 }
@@ -43,5 +48,5 @@ img {
 }
 
 .but:hover {
-  background: $brandh;
+  opacity: 0.6;
 }

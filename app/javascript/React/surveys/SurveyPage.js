@@ -61,6 +61,7 @@ export class SurveyPage extends PureComponent {
             <img src={this.props.currentQuestion.answers[3].picture}></img>
           </div>
         </div>
+        <footer>{this.props.questionIndex + 1}/5</footer>
       </div>
     )
   }
