@@ -1,7 +1,14 @@
-#brandimg {
+.imgwrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
   background-image: url('https://s3.eu-central-1.amazonaws.com/theplaywall/thePlaywallLogo.jpg');
-  width: 600px;
-  height: 125px;
-  display: flex;
-  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: top left;
+  background-size:contain;
+  height: 80px;
 }
