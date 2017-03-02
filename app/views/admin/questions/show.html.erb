@@ -1,4 +1,5 @@
-<div class="answers">
+<div class="question-wrapper">
+<div class="questions">
   <h1><%= @question.text %></h1>
   <% @answers.each_with_index do |answer, i| %>
     <ul>
@@ -16,4 +17,5 @@
     </ul>
   <% end %>
   <%= link_to "See all questions", admin_questions_path %>
+</div>
 </div>

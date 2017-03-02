@@ -34,15 +34,21 @@ body {
   align-self: flex-end;
   position: relative;
   background-color: $brand;
-  color: $primary-dark;
+  color: white;
   font-size: 16px;
   width: 100px;
   height: 30px;
   border: 0;
   border-radius: 4px;
-  box-shadow: 1px 1px 4px $primary-light;
+  margin-bottom: 5px;
   &:hover {
-    box-shadow: inset 1px 1px 4px $primary-light;
-    transform: translateY(1px);
+    background-color: darken($brand, 10%);
+  }
+}
+
+.delete {
+  background-color: darken(red, 10%);
+  &:hover {
+    background-color: darken(red, 20%);
   }
 }

@@ -1,19 +1,17 @@
 <ul>
-  <li class='title'><%= question.text %>
-    <div>
-      <%= button_to "Show", admin_question_path(question.id), { method: :get, class:'button' } %>
-    </div>
-    <div>
-    <%= button_to "Edit", edit_admin_question_path(question.id), { method: :get, class:'button' } %>
-    <%= button_to "Delete", admin_question_path(question.id), { method: :delete, class:'button' } %>
-    </div>
-  </li>
-    <li class='images'>
-    <% question.answers.each do |answer| %>
+  <li class='title'><%= question.text %></li>
+  <li class='images'>
+  <% question.answers.each do |answer| %>
     <div class='image'>
       <%= image_tag answer.picture %>
       <%= answer.title %>
     </div>
-    <% end %>
+  <% end %>
   </li>
+  <li class='action-buttons'>
+    <%= button_to "Show", admin_question_path(question.id), { method: :get, class:'button' } %>
+    <%= button_to "Edit", edit_admin_question_path(question.id), { method: :get, class:'button' } %>
+    <%= button_to "Delete", admin_question_path(question.id), { method: :delete, class:'button delete' } %>
+  </li>
+
 </ul>
