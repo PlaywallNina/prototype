@@ -6,11 +6,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'questions#index' # temporary root
-      resources :questions do
-        resources :answers do
-          resources :given_answers
+        resources :questions do
+          resources :answers do
+            resources :given_answers
+          end
         end
-    end
+    resources :surveys
   end
 
   resources :questions
