@@ -8,6 +8,7 @@ Question.destroy_all
 GivenAnswer.destroy_all
 
 question1 = Question.create(text: 'Wat is je lievelings Apple product?')
+
 question1.answers.create(order: 1, picture: 'http://i.imgur.com/4w0i8pm.jpg', title: 'Android')
 question1.answers.create(order: 2, picture: 'http://i.imgur.com/NXKH4ul.jpg', title: 'AppleWatch')
 question1.answers.create(order: 3, picture: 'http://i.imgur.com/CQFJ6fg.jpg', title: 'iPhone')

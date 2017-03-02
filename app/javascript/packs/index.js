@@ -9,6 +9,7 @@ import App from '../React/App'
 import PlayPayPage from '../React/surveys/PlayPayPage'
 import SurveyPage from '../React/surveys/SurveyPage'
 import ThankYouPage from '../React/components/ThankYou'
+import InfoPage from '../React/components/Info'
 
 document.addEventListener("DOMContentLoaded", e => {
   ReactDOM.render(
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", e => {
           <IndexRoute component={PlayPayPage} />
           <Route path="/survey" component={SurveyPage} />
           <Route path="/thankyou" component={ThankYouPage} />
+          <Route path='/info' component={InfoPage} />
         </Route>
       </Router>
     </Provider>,

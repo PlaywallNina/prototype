@@ -13,24 +13,23 @@ export class PlayPayPage extends React.Component {
   playClick(e) {
     e.preventDefault();
     browserHistory.push('survey');
-
-    console.log("click button");
   }
 
   payClick(e) {
     e.preventDefault();
-    browserHistory.push('questions');
+    browserHistory.push('survey');
+  }
 
-    console.log("click button");
+  infoClick(e) {
+    e.preventDefault();
+    browserHistory.push('info');
   }
 
   render() {
-
     return(
-
         <article className="playpaymodal">
           <div className="info-exit">
-            <p><button className="info" onClick={ this.props.closeModal }>i</button></p>
+            <p><button className="info" onClick={ this.infoClick }>i</button></p>
             <p><button className="exit" onClick={ this.props.closeModal }>x</button></p>
           </div>
           <div className="head-sum-play">
