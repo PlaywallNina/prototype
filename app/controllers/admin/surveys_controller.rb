@@ -15,9 +15,14 @@ class Admin::SurveysController < Admin::BaseController
 
     def create
       @survey = Survey.new(survey_params)
+      @survey.questions.push(Question.find(params[:survey][:questions][:question1]))
+      @survey.questions.push(Question.find(params[:survey][:questions][:question2]))
+      @survey.questions.push(Question.find(params[:survey][:questions][:question3]))
+      @survey.questions.push(Question.find(params[:survey][:questions][:question4]))
+      debugger
 
-      if @question.save
-        redirect_to admin_questions_path
+      if @survey.save
+        redirect_to admin_surveys_path
       else
         render :new
       end
@@ -50,7 +55,7 @@ class Admin::SurveysController < Admin::BaseController
     end
 
     private
-      def question_params
-        params.require(:surveys).permit(:title)
+      def survey_params
+        params.require(:survey).permit(:title)
       end
   end
