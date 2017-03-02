@@ -1,0 +1,32 @@
+<%= form_for ['admin', @survey] do |f| %>
+  <div class='form-group'>
+    <%= f.label :title, 'Question Text' %>
+    <%= f.text_field :title, { placeholder: 'The purpose of this survey' } %>
+  </div>
+
+  <%= f.fields_for :questions do |ff| %>
+    <div class='form-card'>
+      <h2></h2>
+      <div class="form-group">
+        <%= ff.label :text, 'Picture Link' %>
+        <%= ff.collection_select :question1, @questions.all, :id, :text %>
+      </div>
+      <div class="form-group">
+        <%= ff.label :text, 'Picture Link' %>
+        <%= ff.collection_select :question2, @questions.all, :id, :text %>
+      </div>
+      <div class="form-group">
+        <%= ff.label :text, 'Picture Link' %>
+        <%= ff.collection_select :question3, @questions.all, :id, :text %>
+      </div>
+      <div class="form-group">
+        <%= ff.label :text, 'Picture Link' %>
+        <%= ff.collection_select :question4, @questions.all, :id, :text %>
+      </div>
+    </div>
+
+  <% end %>
+  <div class='form-group'>
+    <%= f.submit :save, class: 'button' %>
+  </div>
+<% end %>
