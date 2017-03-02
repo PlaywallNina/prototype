@@ -5,7 +5,10 @@
 @import './variables.sass';
 
 // index
-div.questions {
+.question-wrapper {
+  max-width: 800px;
+}
+.questions {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -54,66 +57,11 @@ div.questions {
         }
       }
     }
-  }
-}
-
-div.answers {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-
-  a {
-    text-align: center;
-    font-size: 120%;
-  }
-  ul {
-    border-bottom: 1px dotted $brand;
-    list-style-type: none;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    align-items:center;
-    flex-direction: row;
-    &:last-child {
-      border-bottom: none;
-    }
-    li {
-      margin-top: -16px;
-    }
-    li.title {
-      font-weight: 700;
-      color: $brand;
-      text-align: center;
-      width: 200px;
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        .button {
-          width: 75px !important;
-        }
-      }
-    }
-    li.images {
-      display: flex;
-      flex-wrap: wrap;
-      div.image {
-        display: inline-flex;
-        flex-direction: column;
-        margin: 10px 5px;
-        text-align: center;
-        img {
-          width: 100px;
-          height: 100px;
-          border-radius: 10%;
-        }
-      }
+    li.action-buttons {
+      margin-left: 20px;
     }
   }
 }
-
-
 
 // form
 .form-card {
