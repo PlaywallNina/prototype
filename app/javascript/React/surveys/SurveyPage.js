@@ -33,30 +33,35 @@ export class SurveyPage extends PureComponent {
       <div className="swrapper">
         <Brand />
         <div className="qwrapper">
-          <h2>What type of food are you?</h2>
+          <h2>{this.props.currentQuestion.text}</h2>
         </div>
         <div className="awrapper">
           <div className="but"
+            id="a1"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[0].id)}
             >
-            Answer 1
+            <img src={this.props.currentQuestion.answers[0].picture}></img>
           </div>
           <div className="but"
+            id="a2"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[1].id)}
             >
-            Answer 2
+            <img src={this.props.currentQuestion.answers[1].picture}></img>
           </div>
           <div className="but"
+            id="a3"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[2].id)}
             >
-            Answer 3
+            <img src={this.props.currentQuestion.answers[2].picture}></img>
           </div>
           <div className="but"
+            id="a4"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[3].id)}
             >
-            Answer 4
+            <img src={this.props.currentQuestion.answers[3].picture}></img>
           </div>
         </div>
+        <footer>{this.props.questionIndex + 1}/5</footer>
       </div>
     )
   }

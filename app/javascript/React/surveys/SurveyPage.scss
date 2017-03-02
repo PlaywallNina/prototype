@@ -15,7 +15,20 @@ body {
   background: $background;
 }
 
+@keyframes fader {
 
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+footer {
+  margin-top: 5%;
+  text-align: center;
+}
 
 .qwrapper {
   text-align: center;
@@ -32,13 +45,12 @@ body {
 }
 
 .but {
-  background: $brand;
   margin: 2%;
   width: 45%;
-  height: 150px;
+  height: 45%;
   text-align: center;
 }
 
 .but:hover {
-  background: $brandh;
+  opacity: 0.6;
 }
