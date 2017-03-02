@@ -7,20 +7,22 @@ $primary-dark  : #3D3047;
 // fonts
 $font          : 'Ubuntu', sans-serif;
 
-
-body {
-  font: 100% $font;
+.modal-container {
+  font-family: $font;
+  font-size: 16px;
   background: $background;
-}
-
-#thankyoucontainer {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  font-family: $font;
-  font-size: 140%;
-  padding: 5px;
   text-align: center;
-  background: white;
+  justify-content:flex-start;
+  align-items: center;
 
+}
+
+.thanks-text {
+  margin-top: -80px;
+  p {
+    margin: 20px 0;
+  }
 }

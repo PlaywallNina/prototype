@@ -7,7 +7,6 @@ export class Brand extends PureComponent {
   render() {
     return(
       <div className="imgwrapper">
-        <div id="brandimg"></div>
       </div>
     )
   }
