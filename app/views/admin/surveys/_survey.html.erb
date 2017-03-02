@@ -1,5 +1,14 @@
 <ul>
-  <li class='title'><%= link_to survey.title, admin_survey_path(survey.id) %></li>
+  <h2><%= survey.title %> -  <%= link_to 'edit', edit_admin_survey_path(survey.id) %></h2>
+    <h3>Questions</h3>
+    <div class="question-wrapper">
+    <div class="questions">
+      <% survey.questions.each do |answer| %>
+        <p><%= answer.text %></p>
+      <% end %>
+    </div>
+    </div>
+</li>
   </li>
 
 </ul>

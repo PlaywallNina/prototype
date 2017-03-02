@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :admins
 
   namespace :admin do
-    root to: 'surveys#index' # temporary root
+    root to: 'questions#index' # temporary root
         resources :questions do
           resources :answers do
             resources :given_answers
