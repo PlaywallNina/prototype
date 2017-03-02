@@ -8,6 +8,14 @@ $pay           : #40C6DB;
 // fonts
 $font          : 'Ubuntu', sans-serif;
 
+button.play:hover {
+  background: darken($brand, 10%)
+}
+
+button.pay:hover {
+  background: darken($pay, 10%)
+}
+
 .info-exit {
   display: flex;
   justify-content: space-between;
