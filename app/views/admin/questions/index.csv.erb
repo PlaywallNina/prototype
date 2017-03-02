@@ -1,9 +1,21 @@
-<% @questions.each do |question| %>
-  <%= CSV.generate_line([question.text]) %>
-  <% headers = ['Answer', 'Times picked', 'Percentage'] %>
-  <%= CSV.generate_line headers %>
-  <% question.answers.each_with_index do |answer, i| %>
-    <% answerDetails = [answer.title, answer.given_answers.count, ((answer.given_answers.count.to_f / @averages[i]) * 100).round] %>
-      <%= CSV.generate_line(answerDetails) %>
+<%- headers = ['Session ID', 'Q1', 'A1', 'Q2', 'A2', 'Q3', 'A3', 'Q4', 'A4'] -%>
+<%= CSV.generate_line headers %>
+<% previous_id = 0 %>
+<% @string_to_print = [] %>
+<% @last_weeks_answers.each do |answer| %>
+  <% if answer.session_id != previous_id || previous_id == 0 %>
+    <% if previous_id != 0 %>
+<%= CSV.generate_line(@string_to_print).html_safe %>
+      <% @string_to_print = [] %>
+    <% end %>
+<% @string_to_print.push(answer.session_id) %>
+    <% previous_id = answer.session_id %>
+    <% @string_to_print.push(Question.find(Answer.find(answer.answer_id).question_id).text) %>
+    <% @string_to_print.push(Answer.find(answer.answer_id).title) %>
+  <% else %>
+    <% previous_id = answer.session_id %>
+    <% @string_to_print.push(Question.find(Answer.find(answer.answer_id).question_id).text) %>
+    <% @string_to_print.push(Answer.find(answer.answer_id).title) %>
   <% end %>
 <% end %>
+<%= CSV.generate_line(@string_to_print).html_safe %>
