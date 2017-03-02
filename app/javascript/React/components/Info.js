@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import './Info.scss'
 import {browserHistory} from 'react-router';
 
 export class ThankYou extends PureComponent {
@@ -10,7 +9,7 @@ export class ThankYou extends PureComponent {
 
   render() {
     return(
-      <div className="modal-container">
+      <div className="main-container">
         <div className='thanks-text'>
           <h1>Over de Playwall</h1>
 

@@ -1,4 +1,14 @@
+// Colors
+$brand         : #DC5D4A;
+$background    : #EBEBEC;
+$primary-light : #484E6D;
+$primary-dark  : #3D3047;
+
+// font
+$font          : 'Ubuntu', sans-serif;
+
 body {
+  font-family: $font;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +21,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -22,4 +31,32 @@ body {
   background-position: top left;
   background-size:contain;
   height: 80px;
+}
+
+.main-container {
+  font-size: 16px;
+  background: $background;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.play {
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 0;
+  overflow: hidden;
+  font-size: 24px;
+  background: $brand;
+  padding: 15px 0;
+  color: white;
+  border-radius: 6px;
+  width: 260px;
+  margin: 0 auto;
+  &:hover {
+    background: darken($brand, 10%);
+  }
 }
