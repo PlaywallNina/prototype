@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 export class ThankYou extends PureComponent {
   render() {
     window.setTimeout(function(){
-      window.close();
+      // we want to close the window
     }, 3000);
 
     return(
