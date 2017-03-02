@@ -1,6 +1,7 @@
 <h1>All Questions</h1>
 <div class="question_actions">
   <%= button_to "Add new", new_admin_question_path, { method: :get, class: 'button' } %>
+  <%= link_to 'Download CSV list', admin_questions_path(format: :csv) %>
 </div>
 <div class="questions">
   <%= render @questions %>

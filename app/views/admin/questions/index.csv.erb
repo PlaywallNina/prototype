@@ -1,0 +1,9 @@
+<% @questions.each do |question| %>
+  <%= CSV.generate_line([question.text]) %>
+  <% headers = ['Answer', 'Times picked', 'Percentage'] %>
+  <%= CSV.generate_line headers %>
+  <% question.answers.each_with_index do |answer, i| %>
+    <% answerDetails = [answer.title, answer.given_answers.count, ((answer.given_answers.count.to_f / @averages[i]) * 100).round] %>
+      <%= CSV.generate_line(answerDetails) %>
+  <% end %>
+<% end %>

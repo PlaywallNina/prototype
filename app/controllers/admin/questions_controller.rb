@@ -1,6 +1,24 @@
 class Admin::QuestionsController < Admin::BaseController
   def index
     @questions = Question.all.order(created_at: :desc)
+    @averages = []
+    @questions.each do |qw|
+      answers = qw.answers
+      amount = 0
+      answers.each do |answ|
+        if GivenAnswer.where(answer_id: answ.id) != []
+          amount += (GivenAnswer.where(answer_id: answ.id)).count
+        end
+      end
+      @averages.push(amount)
+    end
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"question-list.csv\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
   end
 
   def show
