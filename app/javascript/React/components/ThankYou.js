@@ -6,9 +6,9 @@ export class ThankYou extends PureComponent {
 
   render() {
     window.setTimeout(function(){
-      window.location.href = "https://www.google.com";
+      window.location.href = "https://www.svdj.nl/projects/the-playwall/";
     }, 3000);
-    
+
     return(
       <div className="modal-container">
         <Brand />

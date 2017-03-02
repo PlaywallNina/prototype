@@ -7,9 +7,6 @@ import sendAnswer from '../actions/questions/send-answer'
 import './SurveyPage.scss'
 
 export class SurveyPage extends PureComponent {
-
-  // this.props.currentQuestion.answers[0].picture
-
   handleClick(e) {
     this.props.sendAnswer(e)
   }
@@ -35,32 +32,32 @@ export class SurveyPage extends PureComponent {
       <div className="swrapper">
         <Brand />
         <div className="qwrapper">
-          <h2>{this.props.currentQuestion.text}</h2>
+          <p>{this.props.currentQuestion.text}</p>
         </div>
         <div className="awrapper">
           <div className="but"
             id="a1"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[0].id)}
             >
-            <img src="https://placeholdit.imgix.net/~text?txtsize=9&txt=150%C3%97150&w=150&h=150"></img>
+            <img src={this.props.currentQuestion.answers[0].picture}></img>
           </div>
           <div className="but"
             id="a2"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[1].id)}
             >
-            <img src="https://placeholdit.imgix.net/~text?txtsize=9&txt=150%C3%97150&w=150&h=150"></img>
+            <img src={this.props.currentQuestion.answers[1].picture}></img>
           </div>
           <div className="but"
             id="a3"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[2].id)}
             >
-            <img src="https://placeholdit.imgix.net/~text?txtsize=9&txt=150%C3%97150&w=150&h=150"></img>
+            <img src={this.props.currentQuestion.answers[2].picture}></img>
           </div>
           <div className="but"
             id="a4"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[3].id)}
             >
-            <img src="https://placeholdit.imgix.net/~text?txtsize=9&txt=150%C3%97150&w=150&h=150"></img>
+            <img src={this.props.currentQuestion.answers[3].picture}></img>
           </div>
         </div>
         <footer>{this.props.questionIndex + 1}/5</footer>
