@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import {browserHistory} from 'react-router';
-import Brand from '../components/Brand'
 import setCurrentQuestion from '../actions/questions/set-current-question'
 import sendAnswer from '../actions/questions/send-answer'
 import './SurveyPage.scss'
@@ -30,7 +29,6 @@ export class SurveyPage extends PureComponent {
 
     return(
       <div className="swrapper">
-        <Brand />
         <div className="qwrapper">
           <p>{this.props.currentQuestion.text}</p>
         </div>

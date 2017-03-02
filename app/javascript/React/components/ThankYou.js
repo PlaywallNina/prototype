@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import Brand from './Brand'
 import './ThankYou.scss'
 
 export class ThankYou extends PureComponent {
@@ -11,7 +10,6 @@ export class ThankYou extends PureComponent {
 
     return(
       <div className="modal-container">
-        <Brand />
         <div className='thanks-text'>
           <h1>Thanks!</h1>
 

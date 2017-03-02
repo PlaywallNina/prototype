@@ -9,11 +9,19 @@ $pay           : #40C6DB;
 $font          : 'Ubuntu', sans-serif;
 
 button.play:hover {
-  background: darken($brand, 10%)
+  background: darken($brand, 10%);
 }
 
 button.pay:hover {
-  background: darken($pay, 10%)
+  background: darken($pay, 10%);
+}
+
+button.info:hover {
+  background: darken($background, 10%);
+}
+
+button.exit:hover {
+  background: darken(white, 10%);
 }
 
 .info-exit {
@@ -26,7 +34,7 @@ button.pay:hover {
 .playpaymodal {
   font-family: $font;
   font-size: 16px;
-  background: white;
+  background: $background;
   padding: 0 10px;
   width: 300px;
   margin: 0 auto;
