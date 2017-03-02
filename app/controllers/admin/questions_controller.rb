@@ -1,17 +1,6 @@
 class Admin::QuestionsController < Admin::BaseController
   def index
     @questions = Question.all.order(created_at: :desc)
-    # @averages = []
-    # @questions.each do |qw|
-    #   answers = qw.answers
-    #   amount = 0
-    #   answers.each do |answ|
-    #     if GivenAnswer.where(answer_id: answ.id) != []
-    #       amount += (GivenAnswer.where(answer_id: answ.id)).count
-    #     end
-    #   end
-    #   @averages.push(amount)
-    # end
     @last_weeks_answers = GivenAnswer.where(created_at: 2.weeks.ago..DateTime.now)
 
     respond_to do |format|
