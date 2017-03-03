@@ -1,5 +1,6 @@
 <ul>
-  <h2><%= survey.title %> -  <%= link_to 'edit', edit_admin_survey_path(survey.id) %></h2>
+  <h2><%= survey.title %> -  <%= link_to 'edit', edit_admin_survey_path(survey.id) %> - <%= link_to 'Download CSV list', admin_survey_path(survey, format: :csv) %>
+</h2>
     <h3>Questions</h3>
     <div class="question-wrapper">
     <div class="questions">

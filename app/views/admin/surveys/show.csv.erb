@@ -1,0 +1,23 @@
+<% headers = ['Session ID', 'Q1', 'A1', 'Q2', 'A2', 'Q3', 'A3', 'Q4', 'A4'] %>
+<%= CSV.generate_line headers %>
+<% previous_ids = [] %>
+<% @string_to_print = [] %>
+<% @survey.questions.each do |question| %>
+  <% question.answers.each do |answer| %>
+    <% answer.given_answers.each do |given_answer| %>
+      <% if !previous_ids.include? given_answer.session_id %>
+        <% user_answers = GivenAnswer.where(session_id: given_answer.session_id) %>
+        <% previous_ids.push(given_answer.session_id) %>
+        <% @string_to_print.push(given_answer.session_id) %>
+        <% user_answers.each do |user_answer| %>
+          <% if @survey.questions.include? Question.find(Answer.find(user_answer.answer_id).question_id) %>
+            <% @string_to_print.push(Question.find(Answer.find(user_answer.answer_id).question_id).text) %>
+            <% @string_to_print.push(Answer.find(user_answer.answer_id).order) %>
+          <% end %>
+        <% end %>
+<%= CSV.generate_line(@string_to_print).html_safe %>
+        <% @string_to_print = [] %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

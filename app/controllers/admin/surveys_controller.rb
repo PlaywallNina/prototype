@@ -6,6 +6,15 @@ class Admin::SurveysController < Admin::BaseController
     def show
       @survey = Survey.find(params[:id])
       @questions = @survey.questions
+      @last_weeks_answers = GivenAnswer.where(created_at: 2.weeks.ago..DateTime.now)
+
+      respond_to do |format|
+        format.html
+        format.csv do
+          headers['Content-Disposition'] = "attachment; filename=\"question-list.csv\""
+          headers['Content-Type'] ||= 'text/csv'
+        end
+      end
     end
 
     def new

@@ -11,11 +11,11 @@
 <% @string_to_print.push(answer.session_id) %>
     <% previous_id = answer.session_id %>
     <% @string_to_print.push(Question.find(Answer.find(answer.answer_id).question_id).text) %>
-    <% @string_to_print.push(Answer.find(answer.answer_id).title) %>
+    <% @string_to_print.push(Answer.find(answer.answer_id).order) %>
   <% else %>
     <% previous_id = answer.session_id %>
     <% @string_to_print.push(Question.find(Answer.find(answer.answer_id).question_id).text) %>
-    <% @string_to_print.push(Answer.find(answer.answer_id).title) %>
+    <% @string_to_print.push(Answer.find(answer.answer_id).order) %>
   <% end %>
 <% end %>
 <%= CSV.generate_line(@string_to_print).html_safe %>
