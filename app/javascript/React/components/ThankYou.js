@@ -18,7 +18,7 @@ export class ThankYou extends PureComponent {
           <p>Veel leesplezier!</p>
         </div>
         <div>
-          <p><button className='button' onClick={this.closeModal}>Lees artikel</button></p>
+          <p><button className='play' onClick={this.closeModal}>Lees artikel</button></p>
         </div>
       </div>
     )
