@@ -1,15 +1,13 @@
 import React, { PureComponent } from 'react'
 
 export class ThankYou extends PureComponent {
+  closeModal() {
+    window.parent.postMessage('closeModal', '*')
+  }
   render() {
     window.setTimeout(function(){
       window.parent.postMessage('closeModal', '*')
     }, 2000);
-
-    // thanksClick(e) {
-    //   e.preventDefault();
-    //   browserHistory.push('survey');
-    // }
 
     return(
       <div className="main-container">
@@ -20,7 +18,7 @@ export class ThankYou extends PureComponent {
           <p>Veel leesplezier!</p>
         </div>
         <div>
-          <p><button className='button' id='thanks'>Lees artikel</button></p>
+          <p><button className='button' onClick={this.closeModal}>Lees artikel</button></p>
         </div>
       </div>
     )

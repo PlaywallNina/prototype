@@ -11,11 +11,11 @@ export class ThankYou extends PureComponent {
     return(
       <div className="main-container">
         <div className='thanks-text'>
-          <h1>Over de Playwall</h1>
+          <h1>Hoi!</h1>
 
-          <p>De playwall is een manier om toegang te krijgen tot artikelen
-          door het beantwoorden van een aantal vragen.</p>
-          <p>De antwoorden op deze vragen worden uitsluitend anoniem opgeslagen.</p>
+          <p>Bij The Playwall kun je een spelletje spelen en in ruil daarvoor krijg je helemaal gratis deze content!</p>
+          <p>En geen zorgen, alles wat je aanklikt wordt anoniem opgeslagen. Zo krijg jij eindelijk de waarde voor je data, die je verdient.</p>
+          <p>Just play to pay!</p>
           <p>
             <button className='play' onClick={this.backButton}>Ik snap het</button>
           </p>
