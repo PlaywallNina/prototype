@@ -8,12 +8,25 @@ body {
   padding: 0;
   margin: 0;
 }
+h1 {
+  text-align: center;
+}
 
 h2 {
   text-align: center;
-  color: $brand;
 }
 
+a {
+  color: $primary-light;
+  text-decoration: none;
+  font-weight: 700;
+  &:hover {
+    color: $brand;
+  }
+}
+.question_actions {
+  text-align: center;
+}
 //nav
 ul.topnav {
     list-style-type: none;

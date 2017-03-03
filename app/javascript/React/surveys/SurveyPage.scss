@@ -8,15 +8,6 @@ $brandh        : #dc8c4a;
 // fonts
 $font          : 'Ubuntu', sans-serif;
 
-
-@keyframes fader {
-
-}
-
-p {
-  font-size: 20px;
-}
-
 img {
   background: $brand;
   max-width: 100%;
@@ -42,8 +33,9 @@ footer {
   align-items: center;
 }
 .qwrapper {
-  margin-top: 40px;
-  font-size: 16px;
+  margin-top: 50px;
+  padding: 0 5px;
+  font-size: 18px;
   text-align: center;
   overflow: hidden;
 }

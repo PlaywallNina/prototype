@@ -25,6 +25,7 @@ button.exit:hover {
 }
 
 .info-exit {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -41,10 +42,6 @@ button.exit:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.pay-play {
-  margin-top: 60px;
 }
 
 .play {
