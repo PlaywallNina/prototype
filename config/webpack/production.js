@@ -1,5 +1,5 @@
 // Note: You must restart bin/webpack-watcher for changes to take effect
-
+const path = require('path')
 const webpack = require('webpack')
 const merge   = require('webpack-merge')
 
@@ -24,7 +24,7 @@ module.exports = merge(sharedConfig.config, {
     {
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'app/javascript')
+      include: path.join(__dirname, '../app/javascript')
     }
     ]
   },
