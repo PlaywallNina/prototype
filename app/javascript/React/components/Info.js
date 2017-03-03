@@ -10,7 +10,7 @@ export class ThankYou extends PureComponent {
   render() {
     return(
       <div className="main-container">
-        <div className='thanks-text'>
+        <div className='main-text'>
           <h1>Hoi!</h1>
 
           <p>Bij The Playwall kun je een spelletje spelen en in ruil daarvoor krijg je helemaal gratis deze content!</p>
