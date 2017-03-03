@@ -17,7 +17,7 @@ export class PlayPayPage extends React.Component {
 
   payClick(e) {
     e.preventDefault();
-    browserHistory.push('survey');
+    window.parent.postMessage('closeModal', '*')
   }
 
   infoClick(e) {
@@ -25,12 +25,17 @@ export class PlayPayPage extends React.Component {
     browserHistory.push('info');
   }
 
+  exitClick(e) {
+    e.preventDefault();
+    window.parent.postMessage('closeModal', '*')
+  }
+
   render() {
     return(
         <article className="playpaymodal">
           <div className="info-exit">
             <p><button className="info" onClick={ this.infoClick }>i</button></p>
-            <p><button className="exit" onClick={ this.props.closeModal }>x</button></p>
+            <p><button className="exit" onClick={ this.exitClick }>x</button></p>
           </div>
           <div className="head-sum-play">
               <div className="headline">
