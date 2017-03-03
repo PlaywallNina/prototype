@@ -46,6 +46,21 @@ body {
   }
 }
 
+#thanks {
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 0;
+  overflow: hidden;
+  font-size: 24px;
+  background: $brand;
+  padding: 15px 0;
+  color: white;
+  border-radius: 6px;
+  width: 260px;
+  height: 60px;
+  margin: 0 auto;
+}
+
 .delete {
   background-color: darken(red, 10%);
   &:hover {
