@@ -3,8 +3,8 @@ import React, { PureComponent } from 'react'
 export class ThankYou extends PureComponent {
   render() {
     window.setTimeout(function(){
-      window.location.href = "https://www.svdj.nl/projects/the-playwall/";
-    }, 3000);
+      window.parent.postMessage('closeModal', '*')
+    }, 2000);
 
     // thanksClick(e) {
     //   e.preventDefault();
