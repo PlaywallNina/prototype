@@ -15,7 +15,7 @@ export class SurveyPage extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.questionIndex !== this.props.questionIndex) {
-      if (nextProps.questionIndex == 5) {
+      if (nextProps.questionIndex == this.props.questions.length) {
         browserHistory.push('/thankyou')
       }
       const { questionIndex, questions } = nextProps
