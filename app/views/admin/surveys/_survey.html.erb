@@ -1,11 +1,22 @@
 <ul>
-  <h2><%= survey.title %> -  <%= link_to 'edit', edit_admin_survey_path(survey.id) %> - <%= link_to 'Download CSV list', admin_survey_path(survey, format: :csv) %>
+  <h2><%= survey.title %> -  <%= link_to 'Edit', edit_admin_survey_path(survey.id) %> - <%= link_to 'Download CSV list', admin_survey_path(survey, format: :csv) %> - <%= link_to "Delete", admin_survey_path(survey.id), { method: :delete } %>
 </h2>
-    <h3>Questions</h3>
     <div class="question-wrapper">
     <div class="questions">
-      <% survey.questions.each do |answer| %>
-        <p><%= answer.text %></p>
+      <% survey.questions.each do |question| %>
+        <div class="questions">
+          <ul>
+            <li class='title'><%= question.text %></li>
+            <li class='images'>
+            <% question.answers.each do |answer| %>
+              <div class='image'>
+                <%= image_tag answer.picture %>
+                <%= answer.order %>. <%= answer.title %>
+              </div>
+            <% end %>
+            </li>
+          </ul>
+        </div>
       <% end %>
     </div>
     </div>

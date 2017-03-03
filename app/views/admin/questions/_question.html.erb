@@ -4,7 +4,7 @@
   <% question.answers.each do |answer| %>
     <div class='image'>
       <%= image_tag answer.picture %>
-      <%= answer.title %>
+      <%= answer.order %>. <%= answer.title %>
     </div>
   <% end %>
   </li>

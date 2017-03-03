@@ -4,6 +4,42 @@
 
 @import './variables.sass';
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  color: $brand;
+}
+
+//nav
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: $brand;
+    text-align: center;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #EB5D4A;}
+
 // index
 .question-wrapper {
   max-width: 800px;
@@ -63,6 +99,10 @@
   }
 }
 
+.surveys > ul > .question-wrapper > .questions > .questions {
+  border-bottom: 1px dotted $brand;
+  margin-top: 20px;
+}
 // form
 .form-card {
   margin: 20px 0 0;

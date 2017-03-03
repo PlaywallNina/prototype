@@ -8,6 +8,10 @@
   </head>
 
   <body>
+    <ul class="topnav" id="myTopnav">
+      <li><%= link_to "Surveys", admin_surveys_path %></li>
+      <li><%= link_to "Questions", admin_questions_path %></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
