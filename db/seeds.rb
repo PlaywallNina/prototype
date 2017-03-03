@@ -6,6 +6,7 @@ Admin.create(email: 'admin@example.com', password: 'foobar', password_confirmati
 Answer.destroy_all
 Question.destroy_all
 GivenAnswer.destroy_all
+Survey.destroy_all
 
 question1 = Question.create(text: 'Wat is je lievelings Apple product?')
 
