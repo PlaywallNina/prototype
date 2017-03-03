@@ -20,7 +20,12 @@ module.exports = merge(sharedConfig.config, {
     },{
       test: /\.(jpe?g|png|gif|svg)$/i,
       loader: 'url?limit=10000!img?progressive=true'
-      }
+    },
+    {
+      test: /\.js$/,
+      loaders: ['babel'],
+      include: path.join(__dirname, 'app/javascript')
+    }
     ]
   },
   plugins: [
