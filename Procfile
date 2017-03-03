@@ -1,2 +1,2 @@
-rails: bin/rails s -p $PORT
+web: bundle exec puma -C config/puma.rb
 webpack: bin/webpack-watcher
