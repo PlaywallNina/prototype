@@ -3,8 +3,9 @@ import React, { PureComponent } from 'react'
 export class ThankYou extends PureComponent {
   render() {
     window.setTimeout(function(){
-      //window.parent.document.getElementById('#clickme').click()
-      // fix this => CORS?      
+      // window.parent = otherwindow?
+      window.parent.postMessage('closeModal', '*')
+      // window.parent.document.getElementById('#playwall-close-button').click()
     }, 2000);
 
     return(
