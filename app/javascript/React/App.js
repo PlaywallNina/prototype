@@ -16,7 +16,7 @@ class App extends PureComponent {
     return (
       <div className='content'>
         <Brand />
-        { this.props.children }
+          { this.props.children }
       </div>
     )
   }
