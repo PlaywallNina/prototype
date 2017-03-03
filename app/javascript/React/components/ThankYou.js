@@ -6,6 +6,11 @@ export class ThankYou extends PureComponent {
       window.location.href = "https://www.svdj.nl/projects/the-playwall/";
     }, 3000);
 
+    thanksClick(e) {
+      e.preventDefault();
+      browserHistory.push('survey');
+    }
+
     return(
       <div className="main-container">
         <div className='main-text'>
@@ -13,6 +18,9 @@ export class ThankYou extends PureComponent {
 
           <p>Je hebt nu toegang tot je gratis artikel.</p>
           <p>Enjoy!</p>
+        </div>
+        <div>
+          <p><button className='button'>Naar artikel!</button></p>
         </div>
       </div>
     )
