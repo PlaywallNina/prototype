@@ -67,3 +67,9 @@ body {
     background-color: darken(red, 20%);
   }
 }
+input[type=checkbox] {
+  display: inline;
+}
+.checkbox-label {
+  display: inline;
+}

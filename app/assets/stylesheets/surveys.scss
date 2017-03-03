@@ -34,7 +34,7 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     width: 100%;
-    background-color: white;
+    background-color: $brand;
     text-align: center;
 }
 
@@ -42,27 +42,14 @@ ul.topnav li {float: left;}
 
 ul.topnav li a {
     display: inline-block;
-    color: black;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 17px;
-
 }
 
-ul.topnav img {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-    float: left;
-    margin-right: 50px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
 
 /* Change background color of links on hover */
 ul.topnav li a:hover {background-color: #EB5D4A;}
