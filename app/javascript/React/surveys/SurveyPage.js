@@ -40,25 +40,25 @@ export class SurveyPage extends PureComponent {
             id="a1"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[0].id)}
             >
--            <img src={this.props.currentQuestion.answers[0].picture}></img>
+            <img src='https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150'></img>
           </div>
           <div className="but"
             id="a2"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[1].id)}
             >
--            <img src={this.props.currentQuestion.answers[1].picture}></img>
+            <img src='https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150'></img>
           </div>
           <div className="but"
             id="a3"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[2].id)}
             >
--            <img src={this.props.currentQuestion.answers[2].picture}></img>
+            <img src='https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150'></img>
           </div>
           <div className="but"
             id="a4"
             onClick={this.handleClick.bind(this, this.props.currentQuestion.answers[3].id)}
             >
--            <img src={this.props.currentQuestion.answers[3].picture}></img>
+            <img src='https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97150&w=150&h=150'></img>
           </div>
         </div>
         <footer>{this.props.questionIndex + 1}/{this.props.questions.length}</footer>
