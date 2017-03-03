@@ -1,2 +1,2 @@
-rails: bin/rails s -p ENV[$PORT]
+rails: bin/rails s -p $PORT
 webpack: bin/webpack-watcher
