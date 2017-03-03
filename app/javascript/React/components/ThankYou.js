@@ -17,10 +17,10 @@ export class ThankYou extends PureComponent {
           <h1>Thanks!</h1>
 
           <p>Je hebt nu toegang tot je gratis artikel.</p>
-          <p>Enjoy!</p>
+          <p>Veel leesplezier!</p>
         </div>
         <div>
-          <p><button className='button' id='thanks'>Naar artikel!</button></p>
+          <p><button className='button' id='thanks'>Lees artikel</button></p>
         </div>
       </div>
     )

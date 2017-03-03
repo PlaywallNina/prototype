@@ -7,8 +7,6 @@ import './SurveyPage.scss'
 
 export class SurveyPage extends PureComponent {
 
-  // this.props.currentQuestion.answers[0].picture
-
   handleClick(e) {
     this.props.sendAnswer(e)
   }
