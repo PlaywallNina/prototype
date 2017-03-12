@@ -57,10 +57,9 @@ class Admin::SurveysController < Admin::BaseController
 
     def destroy
       @survey = Survey.find(params[:id])
-
       @survey.destroy
 
-      redirect_to admin_surveys_path
+      redirect_to admin_root_path
     end
 
     private

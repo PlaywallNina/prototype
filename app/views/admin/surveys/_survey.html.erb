@@ -1,5 +1,6 @@
 <ul>
-  <h2><%= survey.title %> -  <%= link_to 'Edit', edit_admin_survey_path(survey.id) %> - <%= link_to 'Download CSV list', admin_survey_path(survey, format: :csv) %> - <%= link_to "Delete", admin_survey_path(survey.id), { method: :delete } %>
+  <h2><%= survey.title %> -  <%= link_to 'Edit', edit_admin_survey_path(survey.id) %> - <%= link_to 'Download CSV list', admin_survey_path(survey, format: :csv) %>
+  <%= button_to "Delete", admin_survey_path(survey.id), { method: :delete, class: 'button delete'} %>
 </h2>
     <div class="question-wrapper">
     <div class="questions">
