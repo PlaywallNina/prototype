@@ -1,12 +1,31 @@
 {
   "name": "Playwall",
   "private": true,
+  "scripts": {
+    "test": "mocha app/javascript/React/test/setup.js --recursive app/javascript/React/*.test.js app/javascript/React/**/*.test.js app/javascript/React/**/**/*.test.js",
+    "test:watch": "mocha -w app/javascript/React/test/setup.js -G --recursive app/javascript/React/*.test.js app/javascript/React/**/*.test.js app/javascript/React/**/**/*.test.js"
+  },
   "dependencies": {
+    "babel-eslint": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-register": "^6.24.0",
     "babel-root-import": "^4.1.8",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "chai-spies": "^0.7.1",
+    "cheerio": "^0.22.0",
     "css-loader": "^0.26.2",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-react": "^6.10.0",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^9.12.0",
+    "mocha": "^3.2.0",
+    "mocha-eslint": "^3.0.1",
     "node-sass": "^4.5.0",
     "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "react-router": "^3.0.2",
@@ -32,5 +51,7 @@
     "webpack-dev-server": "^2.4.1",
     "webpack-merge": "^3.0.0"
   },
-  "engines" : { "node" : "6.9.5" }
+  "engines": {
+    "node": "6.9.5"
+  }
 }
